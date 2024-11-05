@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoonsiha</title>
+  <link rel="stylesheet" href="./Main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="main_logo"><a href="">yoonsiha</a></div>
+    <ul class="navbar_menu">
+      <li><a href="#" id="reloadLink">Main</a></li>
+      <li><a href="./html/Portfolio.html">Portfolio</a></li>
+      <li><a href="./html/Photo.html">Photo</a></li>
+      <li><a href="./html/Video.html">Video</a></li>
+      <li><a href="./html/Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="bar"></div>
+  <div class="container">
+    <div class="photo1">
+      <img src="./photo/1.jpg" alt="Photo 1">
+      <div class="photo1-text">
+        <div class="label-value">
+          <span><b>Height</b><br>168cm</span>
+          <span><b>Weight</b><br>45kg</span>
+          <span><b>Shoe</b><br>240mm</span>
+          <span><b>Hair</b><br>Black</span>
+        </div>
+      </div>
+    </div>
+    <div class=" photo2"><img src="./photo/2.jpg"></div>
+    <div class="photo3"><img src="./photo/3.jpg"></div>
+    <div class="photo4"><img src="./photo/4.jpg"></div>
+    <div class="photo5"><img src="./photo/5.jpg"></div>
+  </div>
+
+  <!-- 모달 추가 -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    document.getElementById("reloadLink").addEventListener("click", function (event) {
+      event.preventDefault(); // 기본 동작 방지
+      location.reload(); // 페이지 리로드
+    });
+
+
+    // 모달 기능 JavaScript 코드
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    document.querySelectorAll(".container img").forEach(img => {
+      img.addEventListener("click", function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      });
+    });
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
