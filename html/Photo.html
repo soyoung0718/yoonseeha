@@ -29,9 +29,10 @@
 
   <script>
     // 로고 클릭 시
-    document.getElementById("main_logo").addEventListener("click", function () {
+    document.querySelector(".main_logo a").addEventListener("click", function () {
       sessionStorage.setItem('reloadMain', 'true'); // reloadMain 설정
     });
+
     document.getElementById("mainLink").addEventListener("click", function () {
       sessionStorage.setItem('reloadMain', 'true'); // reloadMain 설정
     });
