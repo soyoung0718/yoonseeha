@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <style>
-    /* 화면 크기가 작아질 때 중앙 정렬과 더 작은 크기의 박스를 위해 스타일을 추가합니다 */
+    /* 전체 컨테이너 스타일 */
     .containerVideo {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -20,6 +20,8 @@
       max-width: 1200px;
       width: 100%;
       margin: auto;
+      justify-content: center;
+      /* 중앙 정렬 */
     }
 
     /* 각 박스 스타일 */
@@ -44,7 +46,7 @@
       height: 100%;
     }
 
-    /* 화면 크기가 600px 이하일 때 그리드의 최소 크기를 줄여 박스가 작아지도록 함 */
+    /* 작은 화면에서 박스 크기를 줄이고 중앙에 정렬 */
     @media screen and (max-width: 600px) {
       .containerVideo {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -52,14 +54,21 @@
       }
     }
 
-    /* 화면 크기가 400px 이하일 때 더 작은 크기의 그리드와 박스 설정 */
+    /* 아이폰 미니 12와 같은 더 작은 화면에서는 박스를 더욱 작게 조정 */
     @media screen and (max-width: 400px) {
       .containerVideo {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: 1fr;
+        /* 한 행에 한 개의 박스만 */
         padding: 10px;
+      }
+
+      .box {
+        padding-top: 75%;
+        /* 세로 비율을 4:3으로 조정해 더 작게 보이도록 함 */
       }
     }
   </style>
+
 
 </head>
 
