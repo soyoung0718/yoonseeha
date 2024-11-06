@@ -268,7 +268,7 @@ a:hover,
   justify-content: center;
   align-items: center; /* 수직, 수평 중앙 정렬 */
   margin-top: 100px;
-  line-height: 10px; /* 줄 간격 */
+  line-height: 50px; /* 줄 간격 */
   text-align: center; /* 텍스트 가운데 정렬 */
   color: gray; /* 폰트 색상을 회색으로 설정 */
   font-family: 'Gowun Batang', serif;
