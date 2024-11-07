@@ -59,7 +59,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  color: black;
+  color: white;
   font-size: 35px;
   font-weight: bold;
   cursor: pointer;
@@ -70,4 +70,20 @@
   color: #f1f1f1;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* 전체 화면에 꽉 차는 모달 이미지 */
+#myModal .modal-content {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 이미지 비율을 유지하면서 꽉 차도록 */
+}
+
+@media (max-width: 768px) {
+  /* 모바일 화면에서 이미지를 화면에 꽉 차게 표시 */
+  #myModal .modal-content {
+    width: 100vw; /* 화면 너비에 맞게 */
+    height: 100vh; /* 화면 높이에 맞게 */
+    object-fit: contain; /* 비율을 유지하면서 화면을 채우기 */
+  }
 }
