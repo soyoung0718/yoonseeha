@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="../css/photo.css">
 </head>
 
 <body>
@@ -24,7 +25,34 @@
     </ul>
   </nav>
   <div id="bar"></div>
-  <p>photo</p>
+  <div class="thumbnail-container">
+    <!-- 썸네일들, 각 썸네일은 관련된 큰 사진으로 연결됩니다 -->
+    <div class="thumbnail" onclick="showAlbum(1)">
+      <img src="../photoAlbum/1.jpg" alt="Photo 1" />
+    </div>
+  </div>
+
+  <!-- 관련된 썸네일들이 나열될 앨범 -->
+  <div id="albumContainer" class="album-container">
+    <div class="thumbnail" onclick="showAlbum(1)">
+      <img src="../photoAlbum/2.jpg" alt="Photo 1" />
+    </div>
+    <div class="thumbnail" onclick="showAlbum(1)">
+      <img src="../photoAlbum/3.jpg" alt="Photo 1" />
+    </div>
+    <div class="thumbnail" onclick="showAlbum(1)">
+      <img src="../photoAlbum/4.jpg" alt="Photo 1" />
+    </div>
+    <div class="thumbnail" onclick="showAlbum(1)">
+      <img src="../photoAlbum/5.jpg" alt="Photo 1" />
+    </div>
+  </div>
+
+  <!-- 모달 -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
   </div>
 
   <script>
@@ -37,6 +65,7 @@
       sessionStorage.setItem('reloadMain', 'true'); // reloadMain 설정
     });
   </script>
+  <script src="../js/photo.js"></script>
 </body>
 
 </html>
