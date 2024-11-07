@@ -20,7 +20,7 @@ html {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* 가로 스크롤 숨기기 */
+  /* overflow-x: hidden; 가로 스크롤 숨기기 */
 }
 
 .navbar {
