@@ -7,38 +7,13 @@ function showAlbum(photoId) {
   const photos = {
     1: [
       '../photoAlbum/1.jpg',
-      '../photoAlbum/2.jpg',
-      '../photoAlbum/3.jpg',
-      '../photoAlbum/4.jpg',
-      '../photoAlbum/5.jpg',
-    ],
-    2: [
-      '../photoAlbum/2.jpg',
-      '../photoAlbum/1.jpg',
-      '../photoAlbum/3.jpg',
-      '../photoAlbum/4.jpg',
-      '../photoAlbum/5.jpg',
+      '../photoAlbum/2.jpg', // photo1을 클릭하면 photo1, photo2
     ],
     3: [
       '../photoAlbum/3.jpg',
-      '../photoAlbum/1.jpg',
-      '../photoAlbum/2.jpg',
       '../photoAlbum/4.jpg',
-      '../photoAlbum/5.jpg',
-    ],
-    4: [
-      '../photoAlbum/4.jpg',
-      '../photoAlbum/2.jpg',
-      '../photoAlbum/3.jpg',
-      '../photoAlbum/5.jpg',
-      '../photoAlbum/1.jpg',
-    ],
-    5: [
-      '../photoAlbum/5.jpg',
-      '../photoAlbum/4.jpg',
-      '../photoAlbum/2.jpg',
-      '../photoAlbum/3.jpg',
-      '../photoAlbum/1.jpg',
+      '../photoAlbum/5.jpg', // photo3을 클릭하면 photo3, photo4, photo5
+      '../photoAlbum/6.jpg',
     ],
   };
 
@@ -54,7 +29,8 @@ function showAlbum(photoId) {
     albumContainer.appendChild(img);
   });
 
-  albumContainer.style.display = 'flex'; // 앨범 표시
+  // 앨범 표시
+  albumContainer.style.display = 'flex'; // 앨범을 보여줌
 }
 
 // 클릭된 썸네일을 모달로 크게 보여주는 함수
