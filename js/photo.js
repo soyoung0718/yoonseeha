@@ -1,23 +1,16 @@
-// 클릭한 썸네일에 해당하는 앨범을 나열하는 함수
+// 썸네일을 클릭하면 관련된 사진이 앨범 형태로 모달에 표시되는 함수
 function showAlbum(photoId) {
+  const albumModal = document.getElementById('albumModal');
   const albumContainer = document.getElementById('albumContainer');
   albumContainer.innerHTML = ''; // 기존 앨범 내용 지우기
 
   // 각 사진 ID에 대한 관련된 썸네일 목록
   const photos = {
-    1: [
-      '../photoAlbum/1.jpg',
-      '../photoAlbum/2.jpg', // photo1을 클릭하면 photo1, photo2
-    ],
-    3: [
-      '../photoAlbum/3.jpg',
-      '../photoAlbum/4.jpg',
-      '../photoAlbum/5.jpg', // photo3을 클릭하면 photo3, photo4, photo5
-      '../photoAlbum/6.jpg',
-    ],
+    1: ['../photoAlbum/1.jpg', '../photoAlbum/2.jpg', '../photoAlbum/3.jpg', '../photoAlbum/4.jpg'],
+    3: ['../photoAlbum/3.jpg', '../photoAlbum/4.jpg', '../photoAlbum/5.jpg'],
   };
 
-  // 선택된 photoId에 해당하는 썸네일을 추가
+  // 선택된 photoId에 해당하는 썸네일들을 앨범에 추가
   const relatedPhotos = photos[photoId];
 
   relatedPhotos.forEach((src) => {
@@ -29,8 +22,8 @@ function showAlbum(photoId) {
     albumContainer.appendChild(img);
   });
 
-  // 앨범 표시
-  albumContainer.style.display = 'flex'; // 앨범을 보여줌
+  // 앨범 모달을 보여줍니다.
+  albumModal.style.display = 'block';
 }
 
 // 클릭된 썸네일을 모달로 크게 보여주는 함수
@@ -42,13 +35,32 @@ function showModal(src) {
 }
 
 // 모달 닫기
-const closeModal = document.querySelector('.close');
-closeModal.onclick = function () {
-  const modal = document.getElementById('myModal');
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
   modal.style.display = 'none'; // 모달 닫기
-};
+}
 
-// 페이지가 처음 로드될 때 앨범을 숨기기
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('albumContainer').style.display = 'none';
+// 앨범 모달 닫기
+const closeAlbumModal = document.querySelector('#albumModal .close');
+if (closeAlbumModal) {
+  closeAlbumModal.addEventListener('click', function () {
+    closeModal('albumModal'); // 앨범 모달 닫기
+  });
+}
+
+// 큰 사진 모달 닫기
+const closeImageModal = document.querySelector('#myModal .close');
+if (closeImageModal) {
+  closeImageModal.addEventListener('click', function () {
+    closeModal('myModal'); // 큰 사진 모달 닫기
+  });
+}
+
+// 배경 클릭 시 모달 닫기 (배경 클릭 시 모달이 닫히도록 처리)
+window.addEventListener('click', function (event) {
+  if (event.target === document.getElementById('albumModal')) {
+    closeModal('albumModal');
+  } else if (event.target === document.getElementById('myModal')) {
+    closeModal('myModal');
+  }
 });
