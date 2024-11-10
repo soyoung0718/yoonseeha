@@ -82,9 +82,6 @@ a:hover,
     align-items: center;
     width: 100%;
   }
-  .container {
-    width: 100%;
-  }
 
   .photo1-text {
     display: flex;
@@ -96,21 +93,38 @@ a:hover,
     flex-wrap: wrap; /* 화면이 줄어들면 텍스트 줄바꿈 */
     gap: 8px; /* 텍스트 항목 간격 */
   }
-
-  .photo1 img {
-    width: auto;
-    height: 80%; /* height를 100%로 설정하여 부모 요소에 맞춤 */
-    object-fit: cover;
+  /* container에서 grid를 flex로 변경하여 세로로 배치 */
+  .container {
+    display: flex !important;
+    flex-direction: column !important; /* 세로로 배치 */
+    gap: 20px !important; /* 사진들 사이 간격 */
   }
 
-  .photosContainer {
-    display: flex;
-    flex-direction: row;
-    transition: transform 0.5s ease-in-out; /* 슬라이드 전환 효과 */
+  /* photo1은 첫 번째로 위치 */
+  .photo1 {
+    order: 1 !important; /* photo1을 첫 번째로 */
+    width: 100% !important;
+  }
+
+  /* photo2부터 photo5까지는 세로로 배치 */
+  .photo2,
+  .photo3,
+  .photo4,
+  .photo5 {
+    order: 2 !important; /* photo2~5는 두 번째로 */
+    width: 100% !important; /* 썸네일 크기를 100%로 설정 */
+    height: auto !important; /* 사진이 잘리지 않게 */
+    object-fit: contain !important; /* 이미지 비율 유지 */
+    margin-bottom: 10px !important; /* 각 썸네일 간격 추가 */
+  }
+
+  /* photo1-text는 photo1 밑에 위치 */
+  .photo1-text {
+    margin-top: 10px !important; /* photo1 밑에 위치 */
   }
 }
-
 /* index css */
+
 .container {
   display: grid;
   grid-template-areas:
@@ -207,18 +221,6 @@ a:hover,
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-}
-
-.container {
-  display: grid;
-  grid-template-areas:
-    'photo1 photo2 photo3'
-    'photo1 photo4 photo5';
-  grid-template-rows: 300px 300px;
-  gap: 10px;
-  margin: 40px auto;
-  max-width: 1200px;
-  padding: 0 20px;
 }
 
 /* contact css */

@@ -7,7 +7,7 @@ function showAlbum(photoId) {
   // 각 사진 ID에 대한 관련된 썸네일 목록
   const photos = {
     1: ['../photoAlbum/1.jpg', '../photoAlbum/2.jpg'],
-    3: ['../photoAlbum/3.jpg', '../photoAlbum/4.jpg', '../photoAlbum/5.jpg', '../photoAlbum/6.jpg'],
+    3: ['../photoAlbum/3.jpg', '../photoAlbum/4.jpg', '../photoAlbum/5.jpg'],
   };
 
   // 선택된 photoId에 해당하는 썸네일들을 앨범에 추가
