@@ -10,6 +10,7 @@ function showAlbum(photoId) {
     3: ['../photoAlbum/3.jpg', '../photoAlbum/4.jpg', '../photoAlbum/5.jpg'],
     6: ['../photoAlbum/6.jpg', '../photoAlbum/7.jpg', '../photoAlbum/8.jpg', '../photoAlbum/9.jpg'],
   };
+  // 최신 업데이트
 
   // 선택된 photoId에 해당하는 썸네일들을 앨범에 추가
   const relatedPhotos = photos[photoId];
