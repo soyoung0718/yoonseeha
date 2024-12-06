@@ -15,6 +15,7 @@ function showAlbum(photoId) {
       '../photoAlbum/9.jpg',
       '../photoAlbum/10.jpg',
     ],
+    11: ['../photoAlbum/11.jpg', '../photoAlbum/12.jpg', '../photoAlbum/13.jpg'],
   };
 
   // 선택된 photoId에 해당하는 썸네일들을 앨범에 추가
