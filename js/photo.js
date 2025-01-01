@@ -16,12 +16,7 @@ function showAlbum(photoId) {
       '../photoAlbum/11.jpg',
     ],
     12: ['../photoAlbum/12.jpg', '../photoAlbum/13.jpg'],
-    14: [
-      '../photoAlbum/14.jpg',
-      '../photoAlbum/15.jpg',
-      '../photoAlbum/16.jpg',
-      '../photoAlbum/17.jpg',
-    ],
+    14: ['../photoAlbum/14.jpg', '../photoAlbum/15.jpg', '../photoAlbum/16.jpg'],
     18: ['../photoAlbum/18.jpg', '../photoAlbum/19.jpg'],
     20: ['../photoAlbum/20.jpg'],
     21: [
