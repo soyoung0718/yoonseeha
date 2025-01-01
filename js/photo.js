@@ -21,11 +21,19 @@ function showAlbum(photoId) {
       '../photoAlbum/15.jpg',
       '../photoAlbum/16.jpg',
       '../photoAlbum/17.jpg',
-      '../photoAlbum/18.jpg',
-      '../photoAlbum/19.jpg',
-      '../photoAlbum/20.jpg',
     ],
-    21: ['../photoAlbum/21.jpg', '../photoAlbum/22.jpg', '../photoAlbum/23.jpg'],
+    18: ['../photoAlbum/18.jpg', '../photoAlbum/19.jpg'],
+    20: ['../photoAlbum/20.jpg'],
+    21: [
+      '../photoAlbum/21.jpg',
+      '../photoAlbum/22.jpg',
+      '../photoAlbum/23.jpg',
+      '../photoAlbum/24.jpg',
+      '../photoAlbum/25.jpg',
+      '../photoAlbum/26.jpg',
+      '../photoAlbum/27.jpg',
+    ],
+    28: ['../photoAlbum/28.jpg', '../photoAlbum/29.jpg', '../photoAlbum/30.jpg'],
   };
 
   // 선택된 photoId에 해당하는 썸네일들을 앨범에 추가
