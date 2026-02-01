@@ -15,6 +15,8 @@ function showAlbum(photoId) {
       '../photoAlbum/10.jpg',
       '../photoAlbum/11.jpg',
     ],
+    31: ['../photoAlbum/31.jpg', '../photoAlbum/32.jpg','../photoAlbum/33.jpg', '../photoAlbum/35.jpg','../photoAlbum/36.jpg', '../photoAlbum/37.jpg','../photoAlbum/38.jpg', '../photoAlbum/39.jpg','../photoAlbum/40.jpg', '../photoAlbum/41.jpg','../photoAlbum/42.jpg', '../photoAlbum/43.jpg'],
+    49: ['../photoAlbum/49.jpg', '../photoAlbum/50.jpg', '../photoAlbum/51.jpg'],
     12: ['../photoAlbum/12.jpg', '../photoAlbum/13.jpg'],
     14: ['../photoAlbum/14.jpg', '../photoAlbum/15.jpg', '../photoAlbum/16.jpg'],
     18: ['../photoAlbum/18.jpg', '../photoAlbum/19.jpg'],
